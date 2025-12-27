@@ -5,8 +5,8 @@ from flask_login import current_user
 import bleach
 
 from . import main
-from .. import ext
 from .forms import CreatePostForm, CommentForm
+from .. import ext
 from ..models import BlogPost, Comment
 from ..decorators import admin_required
 from app import db

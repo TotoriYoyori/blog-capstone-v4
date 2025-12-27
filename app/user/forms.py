@@ -24,4 +24,3 @@ class EditPasswordForm(FlaskForm):
                                      validators=[DataRequired(), Length(min=12), EqualTo("new_password")],
                                      render_kw={"placeholder": "Confirm new password"})
     submit = SubmitField(label="Submit Password Change")
-

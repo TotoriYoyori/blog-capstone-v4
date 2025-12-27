@@ -3,7 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_ckeditor import CKEditor
 from flask_bootstrap import Bootstrap5
-from flask_gravatar import Gravatar
 
 from config import config
 from .base import Base
@@ -12,7 +11,6 @@ from .base import Base
 db = SQLAlchemy(model_class=Base)
 ckeditor = CKEditor()
 bootstrap = Bootstrap5()
-gravatar = Gravatar()
 
 login_manager = LoginManager()
 login_manager.login_view = "auth.login"
@@ -30,7 +28,6 @@ def create_app(config_name = "default"):
     ckeditor.init_app(app)
     bootstrap.init_app(app)
     login_manager.init_app(app)
-    gravatar.init_app(app)
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)

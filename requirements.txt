@@ -1,3 +1,4 @@
+bleach
 flask-bootstrap
 python-dotenv
 Bootstrap_Flask==2.2.0

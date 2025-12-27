@@ -1,5 +1,5 @@
-from flask import abort, render_template, redirect, url_for, flash, session
-from flask_login import login_user, current_user, logout_user, login_required
+from flask import render_template, redirect, url_for, flash, session
+from flask_login import login_user, logout_user, login_required
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from . import auth
