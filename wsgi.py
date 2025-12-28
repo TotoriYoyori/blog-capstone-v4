@@ -1,5 +1,5 @@
 import os
-from app import create_app
+from app import create_app, db
 
 # --------------- Create App
 app = create_app(os.environ.get("PRODUCTION_CONFIG"))
