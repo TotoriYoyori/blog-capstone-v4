@@ -51,7 +51,7 @@ def add_new_post():
             body=form.body.data,
             img_url=form.img_url.data,
             author=current_user,
-            date=date.today().strftime("%B %d, %Y")
+            date=dt.datetime.today().strftime("%B %d, %Y")
         )
         ext.create_post(new_post)
         return redirect(url_for("main.home"))
@@ -78,7 +78,7 @@ def edit_post(post_id):
         post.body = edit_form.body.data
         db.session.commit()
         return redirect(url_for("main.post", post_id=post.id))
-    return render_template("main.make-post.html", form=edit_form, is_edit=True)
+    return render_template("make-post.html", form=edit_form, is_edit=True)
 
 
 @main.route("/delete/<int:post_id>")
